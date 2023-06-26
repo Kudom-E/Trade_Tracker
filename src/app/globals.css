@@ -3,25 +3,52 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --base-background-rgb: 226, 229, 248;
+  --primary-color-rgb: 122, 72, 213;
+  --secondary-color-rgb: 252, 247, 253;
+  --accent-color-rgb: 192, 72, 213;
+  --text-color-rgb: 8, 13, 37;
+  --next-logo-rgb: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --base-background-rgb: 9, 11, 17;
+    --primary-color-rgb: 122, 72, 213;
+    --secondary-color-rgb: 20, 23, 36;
+    --accent-color-rgb: 192, 72, 213;
+    --text-color-rgb: 252, 252, 253;
+    --next-logo-rgb: 255, 255, 255;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--text-color-rgb));
+  background: rgba(var(--base-background-rgb, 1));
+}
+
+g {
+  fill: rgba(var(--next-logo-rgb, 1));
+}
+.ltr-mix-bg {
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    120deg,
+    rgba(var(--primary-color-rgb), 1),
+    rgba(var(--accent-color-rgb), 1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: rgba(131, 131, 131, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--accent-color-rgb), 0.5);
+  border-radius: 4px;
+}
+::selection {
+  background-color: rgba(var(--accent-color-rgb), 1);
 }
