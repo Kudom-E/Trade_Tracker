@@ -16,6 +16,7 @@ const Home = (props: Props) => {
         A nextjs boilerplat with Jest, Circle CI, Vercel, Typescript
       </h4>
       <div>
+        home page error
         <ul className="flex flex-wrap gap-10 justify-center">
           <li className="bg-[rgba(var(--secondary-color-rgb),1)] p-3 rounded-[6px] hover:translate-y-[-2px] hover:shadow-[0_20px_80px_-10px_rgba(var(--secondary-color-rgb),1)] cursor-pointer">
             <BsGithub className="w-[2rem] h-[2rem] fill-[rgba(var(--text-color-rgb),1)]" />
