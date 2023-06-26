@@ -1,8 +1,8 @@
 import React from "react";
 
-type Props = {};
+// type Props = {};
 
-const Logo = (props: Props) => {
+const Logo = () => {
   return (
     <svg
       version="1.0"

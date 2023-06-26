@@ -1,8 +1,8 @@
 import React from "react";
 
-type Props = {};
+// type Props = {};
 
-const Included = (props: Props) => {
+const Included = () => {
   return <div>Included</div>;
 };
 

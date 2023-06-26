@@ -1,8 +1,8 @@
 import React from "react";
 
-type Props = {};
+// type Props = {};
 
-const Sidebar = (props: Props) => {
+const Sidebar = () => {
   return <div></div>;
 };
 

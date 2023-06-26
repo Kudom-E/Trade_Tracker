@@ -6,7 +6,7 @@ import SidebarButton from "./SidebarButton";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-type Props = {};
+// type Props = {};
 
 export const routes = [
   { name: "Home", route: "/" },
@@ -15,7 +15,7 @@ export const routes = [
   { name: "Contact", route: "/contact" },
 ];
 
-const Header = (props: Props) => {
+const Header = () => {
   const pathname = usePathname();
 
   return (

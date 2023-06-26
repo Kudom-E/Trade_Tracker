@@ -3,9 +3,9 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 
-type Props = {};
+// type Props = {};
 
-const SidebarButton = (props: Props) => {
+const SidebarButton = () => {
   return (
     <div className="md:hidden">
       <div>
