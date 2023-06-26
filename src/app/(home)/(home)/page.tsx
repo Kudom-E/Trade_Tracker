@@ -4,9 +4,9 @@ import { AiFillInstagram } from "react-icons/ai";
 import { BsLinkedin } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 
-type Props = {};
+// type Props = {};
 
-const Home = (props: Props) => {
+const Home = () => {
   return (
     <main className="flex flex-grow flex-col items-center justify-center px-[5%] lg:px-[15%]">
       <h1 className="bg-[rgba(var(--secondary-color-rgb),1)] p-8 text-6xl text-center">
