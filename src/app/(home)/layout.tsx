@@ -1,9 +1,7 @@
 import "../globals.css";
 import React from "react";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import CombinedLayout from "./components/CombinedLayout";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
