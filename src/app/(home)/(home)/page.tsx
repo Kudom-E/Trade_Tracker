@@ -9,7 +9,10 @@ import { BsFacebook } from "react-icons/bs";
 const Home = () => {
   return (
     <main className="flex flex-grow flex-col items-center justify-center px-[5%] lg:px-[15%]">
-      <h1 className="bg-[rgba(var(--secondary-color-rgb),1)] p-8 text-6xl text-center">
+      <h1
+        className="bg-[rgba(var(--secondary-color-rgb),1)] p-8 text-6xl text-center"
+        data-testid="main-header"
+      >
         For What is Coming <span className="ltr-mix-bg">Next</span>
       </h1>
       <h4 className="p-8 text-center">
