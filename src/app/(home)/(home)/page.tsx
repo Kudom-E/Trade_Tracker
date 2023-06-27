@@ -15,7 +15,7 @@ const Home = () => {
       >
         For What is Coming <span className="ltr-mix-bg">Next</span>
       </h1>
-      <h4 className="p-8 text-center">
+      <h4 className="p-8 text-center" data-testid="sub-header">
         A nextjs boilerplat with Jest, Circle CI, Vercel, Typescript
       </h4>
       <div>

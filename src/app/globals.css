@@ -52,3 +52,8 @@ g {
 ::selection {
   background-color: rgba(var(--accent-color-rgb), 1);
 }
+
+//consider for module css contact page
+.min-t {
+  width: min(20rem, 100%);
+}
