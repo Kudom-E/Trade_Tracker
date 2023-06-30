@@ -1,7 +1,8 @@
 import React from "react";
 import TotalsCard from "../../components/dashboard/TotalsCard";
+import { Totals } from "@/../../typings";
 
-const totals = [
+const totals: Totals[] = [
   {
     time: "yesterday",
     total: "350",

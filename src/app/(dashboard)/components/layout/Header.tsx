@@ -6,8 +6,8 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="p-10">
-      <h2 className="uppercase font-bold">Dashboard</h2>
+    <header className="px-5 py-10 md:px-10">
+      <h2 className="uppercase font-bold text-white">Dashboard</h2>
     </header>
   );
 };

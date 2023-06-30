@@ -6,7 +6,7 @@ import TotalsSection from "./sections/TotalsSection";
 
 const Dashboard = () => {
   return (
-    <section className="w-full px-10">
+    <section data-testid="dashboard" className="w-full px-5 md:px-10">
       {/* background */}
       <div className="h-[25rem] dashboard-background absolute z-[-1] left-0 right-0 top-0"></div>
       {/* Foreground */}
