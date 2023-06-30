@@ -48,7 +48,7 @@ const Header = () => {
         </div>
         <div className="justify-center items-center gap-4 h-[3rem] hidden md:flex">
           <button className="h-full px-8 bg-[rgba(var(--primary-color-rgb),1)] rounded-[6px] hover:translate-y-[-2px] hover:shadow-[0_20px_80px_-10px_rgba(var(--primary-color-rgb),1)] text-white">
-            Login
+            <Link href="/dashboard">Login</Link>
           </button>
           <button className="h-full px-8 bg-[rgba(var(--secondary-color-rgb),1)] rounded-[6px] hover:translate-y-[-2px] hover:shadow-[0_20px_80px_-10px_rgba(var(--secondary-color-rgb),1)]">
             Sign Up

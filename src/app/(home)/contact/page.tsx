@@ -14,9 +14,15 @@ const Contact = () => {
     <main className="mx-auto px-[5%] lg:px-[15%] pt-[5rem] lg:pt-[10rem] pb-[1rem]">
       <section className="md:p-8">
         <div className="bg-[rgba(var(--secondary-color-rgb),1)] max-w-[65rem] mx-auto rounded-[6px] p-5 md:p-10 xl:p-20">
-          <section className="flex flex-wrap md:flex-nowrap justify-between">
+          <section
+            data-testid="contact-card"
+            className="flex flex-wrap md:flex-nowrap justify-between"
+          >
             {/* info */}
-            <div className="flex flex-col items-center md:items-start">
+            <div
+              className="flex flex-col items-center md:items-start"
+              data-testid="contact-info"
+            >
               <div>
                 <h3 className="text-2xl font-bold text-center md:text-start">
                   Get a quote
@@ -60,7 +66,7 @@ const Contact = () => {
               </div>
             </div>
             {/* form */}
-            <div className="min-t">
+            <div className="min-t" data-testid="contact-form">
               <div className="bg-[rgba(var(--base-background-rgb),1)] p-8 rounded-[6px]">
                 <form>
                   <ul>
