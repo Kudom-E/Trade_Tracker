@@ -56,7 +56,7 @@ Chart.register(
 );
 
 const state = {
-  labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+  labels: ["Mon", "Tue", "Wed", "Thur", "Fri"],
   datasets: [
     {
       // fill: false,
