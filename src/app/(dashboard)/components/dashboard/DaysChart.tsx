@@ -56,41 +56,66 @@ Chart.register(
 );
 
 const state = {
-  labels: ["January", "February", "March", "April", "May"],
+  labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
   datasets: [
     {
       // fill: false,
       lineTension: 0.5,
-      backgroundColor: "rgba(75,192,192,1)",
       borderColor: "rgba(122, 72, 213,1)",
       borderWidth: 5,
 
       data: [65, 59, 80, 81, 56],
     },
   ],
+  plugins: {
+    legend: {
+      display: false,
+    },
+  },
 };
 
 const DaysChart = () => {
   return (
-    <section>
-      <div className="p-5">
+    <section className="h-full">
+      <div className="pt-8 h-full">
         <Line
-          className="w-p[100%]"
           data={state}
           options={{
+            plugins: {
+              legend: {
+                display: false,
+              },
+              tooltip: {
+                intersect: false,
+              },
+            },
             scales: {
               x: {
                 type: "category",
                 grid: {
                   display: false,
-                  // color: "rgba(252, 247, 253, .5)", // Color of the grid lines
+                  // color: "rgba(252, 247, 253, .5)",
+                },
+                border: {
+                  display: false,
                 },
               },
               y: {
-                grid: {
+                border: {
+                  dash: [4, 4],
                   display: false,
-                  color: "rgba(20, 23, 36, .5)",
-                  tickColor: "red",
+                },
+                grace: 1,
+                grid: {
+                  display: true,
+                  drawTicks: false,
+                  color: "rgba(252, 247, 253, .5)",
+                },
+                // beginAtZero: true,
+                // max: 90,
+                ticks: {
+                  stepSize: 3,
+                  padding: 10,
                 },
               },
             },

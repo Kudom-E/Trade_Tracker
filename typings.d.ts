@@ -4,3 +4,16 @@ export interface Totals {
   percentage: string;
   icon: string;
 }
+
+export interface ChartData {
+  labels: string[];
+  datasets: {
+    data: number[];
+    backgroundColor: string;
+  }[];
+  plugins: {
+    legend: {
+      display: boolean;
+    };
+  };
+}

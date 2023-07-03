@@ -6,8 +6,10 @@
   --base-background-rgb: 226, 229, 248;
   --primary-color-rgb: 122, 72, 213;
   --secondary-color-rgb: 252, 247, 253;
+  --secondary-color-false-rgb: 20, 23, 36;
   --accent-color-rgb: 192, 72, 213;
   --text-color-rgb: 8, 13, 37;
+  --text-color-false-rgb: 252, 252, 253;
   --next-logo-rgb: 0, 0, 0;
 }
 
@@ -16,8 +18,10 @@
     --base-background-rgb: 9, 11, 17;
     --primary-color-rgb: 122, 72, 213;
     --secondary-color-rgb: 20, 23, 36;
+    --secondary-color-false-rgb: 20, 23, 36;
     --accent-color-rgb: 192, 72, 213;
     --text-color-rgb: 252, 252, 253;
+    --text-color-false-rgb: 8, 13, 37;
     --next-logo-rgb: 255, 255, 255;
   }
 }
@@ -64,3 +68,11 @@ g {
     rgba(var(--accent-color-rgb), 1)
   );
 }
+#x,
+#y {
+  color: red;
+  border: 1px solid white;
+}
+/* canvas {
+  height: 100% !important;
+} */

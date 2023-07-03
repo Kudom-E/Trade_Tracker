@@ -23,7 +23,7 @@ const totals: Totals[] = [
   },
   {
     time: "last year",
-    total: "30,050,",
+    total: "30,050",
     percentage: "13.48%",
     icon: "increase",
   },
