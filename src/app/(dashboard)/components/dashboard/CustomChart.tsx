@@ -4,22 +4,6 @@ import React from "react";
 import { Bar } from "react-chartjs-2";
 import { ChartData } from "../../../../../typings";
 
-const state = {
-  labels: ["January", "February", "March", "April", "May"],
-  datasets: [
-    {
-      backgroundColor: "rgba(122, 72, 213,1)",
-
-      data: [65, 59, 80, 81, 56],
-    },
-  ],
-  plugins: {
-    legend: {
-      display: false,
-    },
-  },
-};
-
 type Props = {
   chartData: ChartData;
 };
