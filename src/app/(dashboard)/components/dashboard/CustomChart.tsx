@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Bar } from "react-chartjs-2";
-import { useThemeDetector } from "@/custom hooks/ThemeDetector";
 import { ChartData } from "../../../../../typings";
 
 const state = {
@@ -26,10 +25,8 @@ type Props = {
 };
 
 const CustomChart = ({ chartData }: Props) => {
-  const darkTheme = useThemeDetector();
-
   return (
-    <section className="h-full">
+    <section className="h-full" data-testid="custom-bar-chart">
       <div className="pt-8 h-full">
         <Bar
           data={chartData}
@@ -63,10 +60,7 @@ const CustomChart = ({ chartData }: Props) => {
                 grid: {
                   display: true,
                   drawTicks: false,
-                  color:
-                    darkTheme === true
-                      ? "rgba(252, 252, 253, .5)"
-                      : "rgb(8, 13, 37)",
+                  color: "rgba(192, 72, 213,1)",
                 },
                 // beginAtZero: true,
                 // max: 90,

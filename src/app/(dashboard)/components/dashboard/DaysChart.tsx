@@ -76,7 +76,7 @@ const state = {
 
 const DaysChart = () => {
   return (
-    <section className="h-full">
+    <section className="h-full" data-testid="days-line-chart">
       <div className="pt-8 h-full">
         <Line
           data={state}
