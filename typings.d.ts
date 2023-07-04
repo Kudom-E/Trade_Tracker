@@ -17,3 +17,14 @@ export interface ChartData {
     };
   };
 }
+
+export interface TableData {
+  headers: string[];
+  data: {
+    Name: string;
+    Position: string;
+    Office: string;
+    Age?: string;
+    Date?: string;
+  }[];
+}

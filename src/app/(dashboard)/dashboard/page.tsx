@@ -1,5 +1,6 @@
 import React from "react";
 import GraphsSection from "./sections/GraphsSection";
+import TablesSection from "./sections/TablesSection";
 import TotalsSection from "./sections/TotalsSection";
 
 // type Props = {}
@@ -15,6 +16,9 @@ const Dashboard = () => {
       </>
       <>
         <GraphsSection />
+      </>
+      <>
+        <TablesSection />
       </>
     </section>
   );

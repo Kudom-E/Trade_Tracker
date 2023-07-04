@@ -49,7 +49,7 @@ const GraphsSection = () => {
 
   return (
     <section>
-      <div className="flex gap-10 flex-wrap lg:flex-nowrap">
+      <div className="flex gap-10 flex-wrap lg:flex-nowrap pb-10">
         {/* days graph */}
         <div className="bg-[rgba(var(--secondary-color-false-rgb),1)] w-[100%] lg:w-[60%] rounded-[6px] p-4 sm:p-10 max-h-[35rem]">
           <div className="flex justify-between px-2">
