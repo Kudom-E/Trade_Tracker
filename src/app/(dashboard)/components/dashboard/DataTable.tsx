@@ -7,13 +7,19 @@ type Props = {
 
 const DataTable = ({ tableData }: Props) => {
   return (
-    <section className="mt-8">
+    <section className="mt-8 overflow-x-auto">
       <table className="table-auto w-full bg-[rgba(var(--base-background-rgb),.5)] shadow rounded">
         <thead>
           <tr>
             {tableData.headers.map((head, index) => {
               return (
-                <th className="pl-6 py-6" key={index}>
+                <th
+                  data-testid="header"
+                  className={`pl-6 py-6 ${
+                    index === tableData.headers.length - 1 ? "pr-6" : ""
+                  }`}
+                  key={index}
+                >
                   <a
                     className="flex items-center text-xs text-[rgba(var(--text-color-rgb),1)]"
                     href="#"
@@ -42,17 +48,29 @@ const DataTable = ({ tableData }: Props) => {
           {tableData.data.map((data, index) => {
             return (
               <tr
+                data-testid="data-row"
                 className={`text-xs ${
                   index % 2 == 0
                     ? "bg-[rgba(var(--base-background-rgb),1)]"
                     : "bg-[rgba(var(--base-background-rgb),.2)]"
                 }`}
+                key={index}
               >
-                <td className="pl-6 py-6">{data.Name}</td>
-                <td className="pl-6">{data.Position}</td>
-                <td>{data.Office}</td>
-                <td>{data.Age}</td>
-                <td>{data.Date}</td>
+                {Object.values(data).map((item, itemIndex) => {
+                  return (
+                    <td
+                      data-testid="data-column"
+                      className={`pl-6 py-6 ${
+                        itemIndex === Object.values(data).length - 1
+                          ? "pr-4"
+                          : ""
+                      }`}
+                      key={itemIndex}
+                    >
+                      {item}
+                    </td>
+                  );
+                })}
               </tr>
             );
           })}

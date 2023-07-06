@@ -18,7 +18,12 @@ const CombinedLayout = ({ children }: Props) => {
       <Sidebar />
       <div className="h-full overflow-y-scroll flex-grow relative">
         <Header />
-        {children}
+        <section className="w-full px-5 md:px-10">
+          {/* background */}
+          <div className="h-[25rem] dashboard-background absolute z-[-1] left-0 right-0 top-0"></div>
+          {/* Foreground */}
+          {children}
+        </section>
         <Footer />
       </div>
     </div>

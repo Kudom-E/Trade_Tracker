@@ -76,3 +76,7 @@ g {
 /* canvas {
   height: 100% !important;
 } */
+.active-link {
+  border-left: 3px solid rgba(var(--accent-color-rgb), 1);
+  color: rgba(var(--accent-color-rgb), 1);
+}

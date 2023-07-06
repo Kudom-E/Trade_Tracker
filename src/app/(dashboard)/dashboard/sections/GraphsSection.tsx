@@ -74,7 +74,7 @@ const GraphsSection = () => {
             </div>
             <div className="flex gap-3 flex-wrap sm:flex-nowrap justify-items-end">
               <button
-                className={`h-full px-5 md:px-8 bg-[rgba(var(--primary-color-rgb),1)] cursor-default text-white rounded-[6px] text-[rgba(var(--primary-color-rgb),1)]`}
+                className={`h-full px-5 md:px-8 bg-[rgba(var(--primary-color-rgb),1)] hover:translate-y-[-2px] hover:shadow-[0_20px_80px_-10px_rgba(var(--primary-color-rgb),1)] text-white rounded-[6px] text-[rgba(var(--primary-color-rgb),1)]`}
                 onClick={() => switchActive()}
               >
                 {activeGraph === "MonthsGraph" ? "Months" : "Years"}
