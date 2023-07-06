@@ -1,47 +1,36 @@
-import React from "react";
-import { TableData } from "../../../../typings";
-import DataTable from "../components/dashboard/DataTable";
+"use client";
 
-// type Props = {}
+import React, { useEffect, useState } from "react";
+import DataTable from "../components/dashboard/DataTable";
+import Pagination from "../components/dashboard/Pagination";
+import { tableData } from "../dashboard/data/TableData";
 
 const Tables = () => {
-  const tableData: TableData = {
-    headers: ["Name", "Position", "Office", "Age", "Date"],
-    data: [
-      {
-        Name: "Ashton Cox",
-        Position: "Technical Author",
-        Office: "San Francisco",
-        Age: "66",
-        Date: "22/04/2021",
-      },
-      {
-        Name: "Cedric Kelly",
-        Position: "Javascript Developer",
-        Office: "Edinburgh",
-        Age: "22",
-        Date: "22/04/2021",
-      },
-      {
-        Name: "Garrett Winters",
-        Position: "Director",
-        Office: "San Francisco",
-        Age: "63",
-        Date: "22/04/2021",
-      },
-      {
-        Name: "Tiger Nixon",
-        Position: "Systen Architect",
-        Office: "San Francisco",
-        Age: "61",
-        Date: "22/04/2021",
-      },
-    ],
-  };
+  const { headers, data } = tableData;
+
+  const [activePage, setActivePage] = useState(0);
+  const [lastData, setLastData] = useState(0);
+
+  const pageSize = 10;
+
+  useEffect(() => {
+    setLastData((activePage + 1) * pageSize);
+  }, [activePage]);
+
+  const firstData = lastData - pageSize;
+
+  const filteredData = data.slice(firstData, lastData);
+
+  const displayData = { headers, data: filteredData };
+
+  const pageNumbers = Array.from(
+    { length: tableData.data.length / pageSize },
+    (_, index) => index + 1
+  );
 
   return (
     <section>
-      <div className="w-[100%] rounded-[6px] p-4 pb-0 sm:p-10 sm:pb-0 max-h-[35rem]">
+      <div className="w-[100%] rounded-[6px] p-4 pb-0 sm:p-10 sm:pb-0">
         <div className="border-[.5px] border-[rgba(var(--text-color-rgb),.5)] bg-[rgba(var(--secondary-color-rgb),1)] rounded-[6px] p-5">
           <div className="flex justify-between items-center px-2">
             <div className="text-[rgba(var(--text-color-rgb),1)]">
@@ -53,11 +42,18 @@ const Tables = () => {
               </button> */}
             </div>
           </div>
-          <DataTable tableData={tableData} />
+          <DataTable tableData={displayData} />
+          {!(tableData.data.length <= 10) && (
+            <Pagination
+              pages={pageNumbers}
+              activePage={activePage}
+              setActivePage={setActivePage}
+            />
+          )}
         </div>
       </div>
 
-      <div className="w-[100%] rounded-[6px] p-4 sm:p-10 max-h-[35rem]">
+      <div className="w-[100%] rounded-[6px] p-4 sm:p-10">
         <div className="border-[.5px] border-[rgba(var(--text-color-rgb),.5)] bg-[rgba(var(--secondary-color-rgb),1)] rounded-[6px] p-5">
           <div className="flex justify-between items-center px-2">
             <div className="text-[rgba(var(--text-color-rgb),1)]">
@@ -69,7 +65,14 @@ const Tables = () => {
               </button> */}
             </div>
           </div>
-          <DataTable tableData={tableData} />
+          <DataTable tableData={displayData} />
+          {!(tableData.data.length <= 10) && (
+            <Pagination
+              pages={pageNumbers}
+              activePage={activePage}
+              setActivePage={setActivePage}
+            />
+          )}
         </div>
       </div>
     </section>
