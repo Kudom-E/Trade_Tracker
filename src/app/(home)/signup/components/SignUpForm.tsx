@@ -138,7 +138,7 @@ const SignUpForm = () => {
         </div>
         {!passwordConfirmed && (
           <span className="text-red-500 py-3 text-xs">
-            Passwords don't match
+            {`Passwords don't match`}
           </span>
         )}
       </div>
@@ -160,7 +160,7 @@ const SignUpForm = () => {
         </div>
         {!passwordConfirmed && (
           <span className="text-red-500 py-3 text-xs">
-            Passwords don't match
+            {`Passwords don't match`}
           </span>
         )}
       </div>

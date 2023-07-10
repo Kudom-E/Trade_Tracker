@@ -4,15 +4,12 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
-import { usePathname } from "next/navigation";
 
 type Props = {
   children: React.ReactNode;
 };
 
 const CombinedLayout = ({ children }: Props) => {
-  const pathname = usePathname();
-
   return (
     <div className="flex h-screen overflow-hidden">
       <Sidebar />

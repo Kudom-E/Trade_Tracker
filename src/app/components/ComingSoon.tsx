@@ -1,13 +1,12 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
-
-const ComingSoon = (props: Props) => {
+const ComingSoon = () => {
   return (
     <section className="py-4">
       <div className="container px-4 mx-auto">
-        <img className="mx-auto" src="dashy-assets/images/empty.png" alt="" />
+        <Image className="mx-auto" src="dashy-assets/images/empty.png" alt="" />
         <div className="max-w-md mx-auto text-center">
           <h2 className="font-heading mb-3 text-2xl font-semibold">
             It&rsquo;s a bit empty here

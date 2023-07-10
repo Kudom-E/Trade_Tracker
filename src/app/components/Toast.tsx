@@ -30,7 +30,9 @@ const Toast = ({ message }: Props) => {
               ></path>
             </svg>
           </span>
-          <p className="text-green-800">Your settings have been saved</p>
+          <p className="text-green-800">
+            Your settings have been saved {message}
+          </p>
         </div>
       </div>
     </div>

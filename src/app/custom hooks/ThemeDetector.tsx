@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export const useThemeDetector = (): boolean => {
   const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false);
