@@ -1,9 +1,8 @@
 import React from "react";
 import Logo from "@/(home)/components/Logo";
 import Link from "next/link";
-import { RiComputerLine } from "react-icons/ri";
-import { RiTableLine } from "react-icons/ri";
-import { RiUserLine } from "react-icons/ri";
+import { RiComputerLine, RiTableLine, RiUserLine } from "react-icons/ri";
+import { IoExitOutline } from "react-icons/io5";
 import { usePathname } from "next/navigation";
 
 // type Props = {};
@@ -37,7 +36,7 @@ const Sidebar = () => {
         </Link>
       </div>
       <div className="pt-10">
-        <ul>
+        <ul className="flex flex-col justify-between">
           {tabs.map((tab, index) => {
             return (
               <li key={index} className="mb-4">
@@ -53,6 +52,18 @@ const Sidebar = () => {
               </li>
             );
           })}
+
+          <li className="mb-4 absolute left-0 bottom-0 right-0">
+            <Link
+              className={`flex items-center gap-5 px-5 py-3 hover:text-red-500 ${
+                pathname === "/login" ? "active-link" : ""
+              }`}
+              href="/login"
+            >
+              <IoExitOutline />
+              <p>Log Out</p>
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

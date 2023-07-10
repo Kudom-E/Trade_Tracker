@@ -43,6 +43,13 @@ g {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.ltr-bg {
+  background: linear-gradient(
+    120deg,
+    rgba(var(--primary-color-rgb), 1),
+    rgba(var(--accent-color-rgb), 1)
+  );
+}
 
 ::-webkit-scrollbar {
   width: 4px;

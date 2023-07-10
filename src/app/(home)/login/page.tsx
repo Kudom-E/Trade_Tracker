@@ -13,6 +13,9 @@ const Login = () => {
               <p className="text-sm opacity-50 text-center">
                 Log in with credentials
               </p>
+              <p className="text-sm opacity-30 text-center">
+                (You can fill with random info to login)
+              </p>
             </div>
             <div className="pt-2">
               <LoginForm />

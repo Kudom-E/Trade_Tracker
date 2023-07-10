@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { GiDialPadlock } from "react-icons/gi";
 import { GrMail } from "react-icons/gr";
 import { HiEye, HiEyeOff } from "react-icons/hi";
+import { useRouter } from "next/navigation";
 
 type FormValues = {
   email: string;
@@ -11,6 +12,7 @@ type FormValues = {
 };
 
 const LoginForm = () => {
+  const router = useRouter();
   const [oldUser, setOldUser] = useState<FormValues>({
     email: "",
     password: "",
@@ -21,6 +23,7 @@ const LoginForm = () => {
     event?.preventDefault();
 
     console.log(oldUser);
+    router.push("/dashboard");
   };
 
   return (
